@@ -20,40 +20,40 @@ read MYSQL_PASSWORD
 
 mysql -u root -p${MYSQL_PASSWORD} << EOF
 
---Keystone
+-- Keystone
 
 CREATE DATABASE keystone;
 GRANT ALL ON keystone.* TO 'keystone'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 FLUSH PRIVILEGES;
 
---Glance
+-- Glance
 CREATE DATABASE glance;
 GRANT ALL ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON glance.* TO 'glance'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
---Neutron
+-- Neutron
 
 CREATE DATABASE neutron;
 GRANT ALL ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
---Nova
+-- Nova
 CREATE DATABASE nova;
 GRANT ALL ON nova.* TO 'nova'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON nova.* TO 'nova'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
---Cinder
+-- Cinder
 CREATE DATABASE cinder;
 GRANT ALL ON cinder.* TO 'cinder'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON cinder.* TO 'cinder'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
---Heat
+-- Heat
 CREATE DATABASE heat;
 GRANT ALL ON heat.* TO 'heat'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON heat.* TO 'heat'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
---Trove
+-- Trove
 CREATE DATABASE trove;
 GRANT ALL ON trove.* TO 'trove'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 GRANT ALL ON trove.* TO 'trove'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
