@@ -36,7 +36,7 @@ GRANT ALL ON glance.* TO 'glance'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
 CREATE DATABASE neutron;
 GRANT ALL ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
-GRANT ALL ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
+GRANT ALL ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
 -- Nova
 CREATE DATABASE nova;
