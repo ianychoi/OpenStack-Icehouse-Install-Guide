@@ -60,3 +60,5 @@ GRANT ALL ON trove.* TO 'trove'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 
 FLUSH PRIVILEGES;
 EOF
+
+echo -n "Successfully created databases: Keystone, Glance, Neutron, Nova, Cinder, Heat & Trove."
